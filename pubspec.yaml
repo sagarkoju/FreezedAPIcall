@@ -1,0 +1,84 @@
+name: demo
+description: A new Flutter project.
+
+
+
+publish_to: 'none' 
+
+
+
+
+
+
+
+
+
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  
+  
+  cupertino_icons: ^1.0.2
+  freezed_annotation: ^0.14.1
+  hooks_riverpod: ^0.13.1+1
+  flutter_hooks: ^0.16.0
+  dartz: ^0.10.0-nullsafety.1
+  dio: 4.0.0-beta7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  freezed: ^0.14.1+1
+  build_runner: ^2.0.4
+  json_serializable: ^4.1.0
+
+
+
+
+
+flutter:
+
+  
+  
+  
+  uses-material-design: true
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
