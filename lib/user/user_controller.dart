@@ -11,7 +11,7 @@ final userController = StateNotifierProvider.autoDispose((ref) {
     ..getUserData();
 });
 
-class UserController<T> extends StateNotifier<BaseState<Data>> {
+class UserController<T> extends StateNotifier<BaseState> {
   UserController(this._read, {this.cancelToken})
       : super(const BaseState.initial());
 
@@ -26,7 +26,7 @@ class UserController<T> extends StateNotifier<BaseState<Data>> {
     state = const BaseState.loading();
     final response = await _userRepo.getUserData();
     state = response.fold(
-      (user) => BaseState<Data>.success(data: user),
+      (user) => BaseState<List<Data>>.success(data: user),
       (failure) => BaseState.error(failure),
     );
   }

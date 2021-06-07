@@ -13,7 +13,7 @@ final userRepository = Provider<IUserRepository>((ref) {
 });
 
 abstract class IUserRepository {
-  Future<Either<Data, Failure>> getUserData({
+  Future<Either<List<Data>, Failure>> getUserData({
     CancelToken? cancelToken,
   });
 }
@@ -26,16 +26,16 @@ class UserRepository implements IUserRepository {
 
   Dio get _dio => _read(dioProvider);
   @override
-  Future<Either<Data, Failure>> getUserData({
+  Future<Either<List<Data>, Failure>> getUserData({
     CancelToken? cancelToken,
   }) async {
     try {
-      final response = await _dio.get<Map<String, dynamic>>(
+      final response = await _dio.get(
         AuthEp.demo,
         cancelToken: cancelToken,
       );
-      final json = Map<String, dynamic>.from(response.data!);
-      final data = Data.fromJson(json);
+      final json = List<Map<String, dynamic>>.from(response.data!);
+      final data = json.map((e) => Data.fromJson(e)).toList();
       log('$data');
       return Left(data);
     } on DioError catch (e) {

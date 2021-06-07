@@ -1,16 +1,11 @@
-import 'package:demo/application/users.dart';
 import 'package:demo/user/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomePage extends StatelessWidget {
-  final Data? userdata;
-  final List<Data> _display = [];
-
   HomePage({
     Key? key,
-    this.userdata,
   }) : super(key: key);
 
   @override
@@ -32,12 +27,18 @@ class HomePage extends StatelessWidget {
                     ),
                 orElse: () => const SizedBox(),
                 success: (user) {
-                  return ListView.builder(itemBuilder: (context, index) {
-                    final user = _display[index];
-                    return ListTile(
-                      title: Text(user.title),
-                    );
-                  });
+                  return ListView.builder(
+                      itemCount: user.data!.length,
+                      itemBuilder: (context, index) {
+                        final data = user.data;
+                        return ListTile(
+                          title: Text(data[index].title),
+                          leading: CircleAvatar(
+                            backgroundImage: NetworkImage(data[index].url),
+                          ),
+                          subtitle: Text(data![index].id.toString()),
+                        );
+                      });
                 });
           },
         ),
