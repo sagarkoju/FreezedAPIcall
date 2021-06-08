@@ -10,13 +10,15 @@ class ButtonWidget extends StatelessWidget {
   final VoidCallback onpressed;
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: StadiumBorder(),
-        padding: EdgeInsets.all(8),
+    final size = MediaQuery.of(context).size;
+    return Container(
+      padding: EdgeInsets.all(8),
+      width: size.width,
+      height: size.height * 0.09,
+      child: ElevatedButton(
+        onPressed: onpressed,
+        child: Text(text),
       ),
-      onPressed: onpressed,
-      child: Text(text),
     );
   }
 }

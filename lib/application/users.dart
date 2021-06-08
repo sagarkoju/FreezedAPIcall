@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/rendering.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'users.freezed.dart';
 part 'users.g.dart';
@@ -16,4 +18,28 @@ class Data with _$Data {
     @Default('') String thumbnailUrl,
   }) = _Data;
   factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+}
+
+@freezed
+class Comment with _$Comment {
+  const factory Comment({
+    @Default(-1) int postId,
+    @Default(-1) int id,
+    @Default('') String name,
+    @Default('') String email,
+    @Default('') String body,
+  }) = _Comment;
+  factory Comment.fromJson(Map<String, dynamic> json) =>
+      _$CommentFromJson(json);
+}
+
+@freezed
+class Todos with _$Todos {
+  const factory Todos({
+    @Default(-1) int id,
+    @Default(-1) int userId,
+    @Default('') String title,
+    @Default('') String completed,
+  }) = _Todos;
+  factory Todos.fromJson(Map<String, dynamic> json) => _$TodosFromJson(json);
 }

@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({
-    Key? key,
-  }) : super(key: key);
+class TodoScreen extends StatefulWidget {
+  const TodoScreen({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _TodoScreenState createState() => _TodoScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TodoScreenState extends State<TodoScreen> {
   @override
   void initState() {
-    context.read(userController).getUserData();
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+      context.read(userController).getUserTodo();
+    });
     super.initState();
   }
 
@@ -41,13 +41,13 @@ class _HomePageState extends State<HomePage> {
                   return ListView.builder(
                       itemCount: user.data!.length,
                       itemBuilder: (context, index) {
-                        final data = user.data;
+                        final datadisplay = user.data;
                         return ListTile(
-                          title: Text(data[index].title),
+                          title: Text(datadisplay[index].title),
                           leading: CircleAvatar(
-                            backgroundImage: NetworkImage(data[index].url),
+                            child: Text(datadisplay[index].id.toString()),
                           ),
-                          subtitle: Text(data![index].id.toString()),
+                          // subtitle: Text(datadisplay[index].completed),
                         );
                       });
                 });

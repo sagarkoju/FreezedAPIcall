@@ -7,8 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 final userController = StateNotifierProvider.autoDispose((ref) {
   final cancelToken = CancelToken();
   ref.onDispose(cancelToken.cancel);
-  return UserController<Data>(ref.read, cancelToken: cancelToken)
-    ..getUserData();
+  return UserController<Data>(ref.read, cancelToken: cancelToken);
 });
 
 class UserController<T> extends StateNotifier<BaseState> {
@@ -27,6 +26,24 @@ class UserController<T> extends StateNotifier<BaseState> {
     final response = await _userRepo.getUserData();
     state = response.fold(
       (user) => BaseState<List<Data>>.success(data: user),
+      (failure) => BaseState.error(failure),
+    );
+  }
+
+  Future<void> getUserComment() async {
+    state = const BaseState.loading();
+    final response = await _userRepo.getUserComment();
+    state = response.fold(
+      (user) => BaseState<List<Comment>>.success(data: user),
+      (failure) => BaseState.error(failure),
+    );
+  }
+
+  Future<void> getUserTodo() async {
+    state = const BaseState.loading();
+    final response = await _userRepo.getUserTodo();
+    state = response.fold(
+      (user) => BaseState<List<Todos>>.success(data: user),
       (failure) => BaseState.error(failure),
     );
   }

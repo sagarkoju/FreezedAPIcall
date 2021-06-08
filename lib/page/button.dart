@@ -1,6 +1,7 @@
 import 'package:demo/Widget/button_widget.dart';
 import 'package:demo/page/photos.dart';
-import 'package:demo/page/user.dart';
+import 'package:demo/page/comments_data.dart';
+import 'package:demo/page/todo.dart';
 import 'package:flutter/material.dart';
 
 class ButtonScreen extends StatelessWidget {
@@ -24,11 +25,23 @@ class ButtonScreen extends StatelessWidget {
                   Navigator.push(
                       context, MaterialPageRoute(builder: (_) => HomePage()));
                 }),
+            SizedBox(
+              height: 10,
+            ),
             ButtonWidget(
-                text: 'User',
+                text: 'Commets',
+                onpressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => CommentScreen()));
+                }),
+            SizedBox(
+              height: 10,
+            ),
+            ButtonWidget(
+                text: 'Todo',
                 onpressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => UserScreen()));
+                      context, MaterialPageRoute(builder: (_) => TodoScreen()));
                 }),
           ],
         ),
