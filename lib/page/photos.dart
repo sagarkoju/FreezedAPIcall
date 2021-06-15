@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({
+class HomePageScreen extends StatefulWidget {
+  HomePageScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageScreenState createState() => _HomePageScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageScreenState extends State<HomePageScreen> {
   @override
   void initState() {
     context.read(userController).getUserData();

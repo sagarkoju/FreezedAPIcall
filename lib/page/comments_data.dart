@@ -1,3 +1,4 @@
+import 'package:demo/Widget/custom_shimmer.dart';
 import 'package:demo/user/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -23,6 +24,7 @@ class _CommentScreenState extends State<CommentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.teal,
         title: Text('Api Data Call from Freezed package'),
         centerTitle: true,
@@ -32,9 +34,25 @@ class _CommentScreenState extends State<CommentScreen> {
           builder: (context) {
             final data = useProvider(userController.state);
             return data.maybeMap(
-                loading: (_) => const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CircularProgressIndicator(),
+                loading: (_) => ListView.separated(
+                      itemBuilder: (context, index) {
+                        return CustomShimmer(
+                            widget: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 8, horizontal: 10),
+                          child: Container(
+                            height: 100,
+                            width: MediaQuery.of(context).size.width,
+                            color: Colors.grey,
+                          ),
+                        ));
+                      },
+                      separatorBuilder: (context, index) {
+                        return Divider(
+                          color: Colors.red,
+                        );
+                      },
+                      itemCount: 9,
                     ),
                 orElse: () => const SizedBox(),
                 success: (user) {

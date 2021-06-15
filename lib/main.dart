@@ -1,5 +1,4 @@
-import 'package:demo/page/button.dart';
-
+import 'package:demo/route/apps_router.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -8,10 +7,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ButtonScreen(),
+    return MaterialApp.router(
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
       debugShowCheckedModeBanner: false,
     );
   }

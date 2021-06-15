@@ -1,11 +1,11 @@
 import 'package:demo/Widget/button_widget.dart';
-import 'package:demo/page/photos.dart';
-import 'package:demo/page/comments_data.dart';
+
 import 'package:demo/page/todo.dart';
+import 'package:demo/route/apps_router.dart';
 import 'package:flutter/material.dart';
 
-class ButtonScreen extends StatelessWidget {
-  const ButtonScreen({Key? key}) : super(key: key);
+class ButtonScreenPage extends StatelessWidget {
+  const ButtonScreenPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +23,7 @@ class ButtonScreen extends StatelessWidget {
               ButtonWidget(
                   text: 'Photos',
                   onpressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => HomePage()));
+                    context.router.push(HomePageRoute());
                   }),
               SizedBox(
                 height: 10,
@@ -32,8 +31,7 @@ class ButtonScreen extends StatelessWidget {
               ButtonWidget(
                   text: 'Commets',
                   onpressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => CommentScreen()));
+                    context.router.push(CommentRoute());
                   }),
               SizedBox(
                 height: 10,
@@ -43,6 +41,11 @@ class ButtonScreen extends StatelessWidget {
                   onpressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => TodoScreen()));
+                  }),
+              ButtonWidget(
+                  text: 'FamilyPrimitive Modifier',
+                  onpressed: () {
+                    context.router.push(RiverpodRoute());
                   }),
               ButtonWidget(
                   text: 'Bottom Sheet',
@@ -62,7 +65,7 @@ class ButtonScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 SizedBox(
-                                  height: 10,
+                                  height: 04,
                                 ),
                                 CircleAvatar(
                                   backgroundImage: NetworkImage(
@@ -85,10 +88,10 @@ class ButtonScreen extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 05,
                                 ),
                                 Text(
-                                  'Modal Bottom Sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app. It will appear over the UI so that there is no need to navigate to a different page. It can be used to perform a small task',
+                                  'Modal Bottom Sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app. ',
                                   textScaleFactor: 1.5,
                                   textAlign: TextAlign.justify,
                                 ),
