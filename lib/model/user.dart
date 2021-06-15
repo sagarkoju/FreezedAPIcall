@@ -13,6 +13,7 @@ class User {
 }
 
 final users = [
+  // final List<User>users =[]
   User(
     urlAvatar:
         "https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-9/169393807_3769730173146153_1447273600101580803_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=_CIVaTiHMZUAX8nrVY5&_nc_ht=scontent.fktm3-1.fna&oh=f8bdc8f733eb7a61c7ec517a3b30a92a&oe=60CC01FF",

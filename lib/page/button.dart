@@ -100,6 +100,11 @@ class ButtonScreenPage extends StatelessWidget {
                           );
                         });
                   }),
+              ButtonWidget(
+                  text: 'Draggable ScrollableSheet',
+                  onpressed: () {
+                    context.router.push(DragRoute());
+                  }),
             ],
           ),
         ),

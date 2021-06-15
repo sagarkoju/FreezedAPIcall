@@ -9,6 +9,7 @@ import 'package:flutter/material.dart' as _i2;
 
 import '../../page/button.dart' as _i3;
 import '../../page/comments_data.dart' as _i5;
+import '../../page/dragablescroll_shet.dart' as _i7;
 import '../../page/photos.dart' as _i4;
 import '../../page/riverpod_screen.dart' as _i6;
 
@@ -39,6 +40,11 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i6.RiverpodScreen();
+        }),
+    DragRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i7.DragScreen();
         })
   };
 
@@ -47,7 +53,8 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(ButtonRoutePage.name, path: '/'),
         _i1.RouteConfig(HomePageRoute.name, path: '/home-page-screen'),
         _i1.RouteConfig(CommentRoute.name, path: '/comment-screen'),
-        _i1.RouteConfig(RiverpodRoute.name, path: '/riverpod-screen')
+        _i1.RouteConfig(RiverpodRoute.name, path: '/riverpod-screen'),
+        _i1.RouteConfig(DragRoute.name, path: '/drag-screen')
       ];
 }
 
@@ -81,4 +88,10 @@ class RiverpodRoute extends _i1.PageRouteInfo {
   const RiverpodRoute() : super(name, path: '/riverpod-screen');
 
   static const String name = 'RiverpodRoute';
+}
+
+class DragRoute extends _i1.PageRouteInfo {
+  const DragRoute() : super(name, path: '/drag-screen');
+
+  static const String name = 'DragRoute';
 }
