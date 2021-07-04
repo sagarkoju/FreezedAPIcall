@@ -7,11 +7,14 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 
+import '../../page/animated_icon.dart' as _i8;
 import '../../page/button.dart' as _i3;
 import '../../page/comments_data.dart' as _i5;
 import '../../page/dragablescroll_shet.dart' as _i7;
+import '../../page/login.dart' as _i10;
 import '../../page/photos.dart' as _i4;
 import '../../page/riverpod_screen.dart' as _i6;
+import '../../page/shimmer.dart' as _i9;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
@@ -45,6 +48,21 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i7.DragScreen();
+        }),
+    AnimatedIconRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i8.AnimatedIconScreen();
+        }),
+    ShimmerRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i9.ShimmerScreen();
+        }),
+    LoginRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i10.LoginScreen();
         })
   };
 
@@ -54,7 +72,10 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(HomePageRoute.name, path: '/home-page-screen'),
         _i1.RouteConfig(CommentRoute.name, path: '/comment-screen'),
         _i1.RouteConfig(RiverpodRoute.name, path: '/riverpod-screen'),
-        _i1.RouteConfig(DragRoute.name, path: '/drag-screen')
+        _i1.RouteConfig(DragRoute.name, path: '/drag-screen'),
+        _i1.RouteConfig(AnimatedIconRoute.name, path: '/animated-icon-screen'),
+        _i1.RouteConfig(ShimmerRoute.name, path: '/shimmer-screen'),
+        _i1.RouteConfig(LoginRoute.name, path: '/login-screen')
       ];
 }
 
@@ -94,4 +115,22 @@ class DragRoute extends _i1.PageRouteInfo {
   const DragRoute() : super(name, path: '/drag-screen');
 
   static const String name = 'DragRoute';
+}
+
+class AnimatedIconRoute extends _i1.PageRouteInfo {
+  const AnimatedIconRoute() : super(name, path: '/animated-icon-screen');
+
+  static const String name = 'AnimatedIconRoute';
+}
+
+class ShimmerRoute extends _i1.PageRouteInfo {
+  const ShimmerRoute() : super(name, path: '/shimmer-screen');
+
+  static const String name = 'ShimmerRoute';
+}
+
+class LoginRoute extends _i1.PageRouteInfo {
+  const LoginRoute() : super(name, path: '/login-screen');
+
+  static const String name = 'LoginRoute';
 }

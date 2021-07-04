@@ -33,6 +33,19 @@ class ButtonScreenPage extends StatelessWidget {
                   onpressed: () {
                     context.router.push(CommentRoute());
                   }),
+                  SizedBox(
+                height: 10,
+              ),
+                    ButtonWidget(
+                  text: 'Shimmer effect',
+                  onpressed: () {
+                    context.router.push(ShimmerRoute());
+                  }),
+                       ButtonWidget(
+                  text: 'Login Form',
+                  onpressed: () {
+                    context.router.push(LoginRoute());
+                  }),
               SizedBox(
                 height: 10,
               ),
@@ -104,6 +117,11 @@ class ButtonScreenPage extends StatelessWidget {
                   text: 'Draggable ScrollableSheet',
                   onpressed: () {
                     context.router.push(DragRoute());
+                  }),
+              ButtonWidget(
+                  text: 'Animated Icon',
+                  onpressed: () {
+                    context.router.push(AnimatedIconRoute());
                   }),
             ],
           ),

@@ -15,6 +15,11 @@ class _DragScreenState extends State<DragScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Draggable Scroll Sheet'),
+        centerTitle: true,
+        backgroundColor: Colors.black38,
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -23,8 +28,8 @@ class _DragScreenState extends State<DragScreen> {
             fit: BoxFit.cover,
           ),
           DraggableScrollableSheet(
-              initialChildSize: 0.5,
-              minChildSize: 0.0,
+              initialChildSize: 0.9,
+              minChildSize: 0.1,
               maxChildSize: 0.9,
               builder: (context, controller) {
                 return Container(
