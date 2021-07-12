@@ -33,18 +33,28 @@ class ButtonScreenPage extends StatelessWidget {
                   onpressed: () {
                     context.router.push(CommentRoute());
                   }),
-                  SizedBox(
+              SizedBox(
                 height: 10,
               ),
-                    ButtonWidget(
+              ButtonWidget(
                   text: 'Shimmer effect',
                   onpressed: () {
                     context.router.push(ShimmerRoute());
                   }),
-                       ButtonWidget(
+              ButtonWidget(
+                  text: 'Text Overflow',
+                  onpressed: () {
+                    context.router.push(TextOverflowRoute());
+                  }),
+              ButtonWidget(
                   text: 'Login Form',
                   onpressed: () {
                     context.router.push(LoginRoute());
+                  }),
+                    ButtonWidget(
+                  text: 'Stepper',
+                  onpressed: () {
+                    context.router.push(SteppeRoute());
                   }),
               SizedBox(
                 height: 10,

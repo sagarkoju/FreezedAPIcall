@@ -15,6 +15,8 @@ import '../../page/login.dart' as _i10;
 import '../../page/photos.dart' as _i4;
 import '../../page/riverpod_screen.dart' as _i6;
 import '../../page/shimmer.dart' as _i9;
+import '../../page/stepper.dart' as _i12;
+import '../../page/text_overflow.dart' as _i11;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
@@ -63,6 +65,16 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i10.LoginScreen();
+        }),
+    TextOverflowRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i11.TextOverflowScreen();
+        }),
+    SteppeRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i12.SteppeScreen();
         })
   };
 
@@ -75,7 +87,9 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(DragRoute.name, path: '/drag-screen'),
         _i1.RouteConfig(AnimatedIconRoute.name, path: '/animated-icon-screen'),
         _i1.RouteConfig(ShimmerRoute.name, path: '/shimmer-screen'),
-        _i1.RouteConfig(LoginRoute.name, path: '/login-screen')
+        _i1.RouteConfig(LoginRoute.name, path: '/login-screen'),
+        _i1.RouteConfig(TextOverflowRoute.name, path: '/text-overflow-screen'),
+        _i1.RouteConfig(SteppeRoute.name, path: '/steppe-screen')
       ];
 }
 
@@ -133,4 +147,16 @@ class LoginRoute extends _i1.PageRouteInfo {
   const LoginRoute() : super(name, path: '/login-screen');
 
   static const String name = 'LoginRoute';
+}
+
+class TextOverflowRoute extends _i1.PageRouteInfo {
+  const TextOverflowRoute() : super(name, path: '/text-overflow-screen');
+
+  static const String name = 'TextOverflowRoute';
+}
+
+class SteppeRoute extends _i1.PageRouteInfo {
+  const SteppeRoute() : super(name, path: '/steppe-screen');
+
+  static const String name = 'SteppeRoute';
 }

@@ -9,6 +9,8 @@ import 'package:demo/page/login.dart';
 import 'package:demo/page/photos.dart';
 import 'package:demo/page/riverpod_screen.dart';
 import 'package:demo/page/shimmer.dart';
+import 'package:demo/page/stepper.dart';
+import 'package:demo/page/text_overflow.dart';
 
 @MaterialAutoRouter(
   preferRelativeImports: true,
@@ -22,6 +24,8 @@ import 'package:demo/page/shimmer.dart';
     AutoRoute<void>(page: AnimatedIconScreen),
     AutoRoute<void>(page: ShimmerScreen),
     AutoRoute<void>(page: LoginScreen),
+    AutoRoute<void>(page: TextOverflowScreen),
+    AutoRoute<void>(page: SteppeScreen),
   ],
 )
 class $AppRouter {}
