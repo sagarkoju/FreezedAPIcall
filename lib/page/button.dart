@@ -51,7 +51,12 @@ class ButtonScreenPage extends StatelessWidget {
                   onpressed: () {
                     context.router.push(LoginRoute());
                   }),
-                    ButtonWidget(
+              ButtonWidget(
+                  text: 'Silver app bar',
+                  onpressed: () {
+                    context.router.push(SilverAppBarRoute());
+                  }),
+              ButtonWidget(
                   text: 'Stepper',
                   onpressed: () {
                     context.router.push(SteppeRoute());

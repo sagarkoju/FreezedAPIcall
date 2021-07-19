@@ -1,3 +1,4 @@
+import 'package:demo/customicon/flutter_demo_icons.dart';
 import 'package:flutter/material.dart';
 
 class TextOverflowScreen extends StatelessWidget {
@@ -13,15 +14,19 @@ class TextOverflowScreen extends StatelessWidget {
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 50,
-                color: Colors.red,
-                child: Text(
-                  'Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
+              Icon(FlutterDemo.alarm_light),
+              Icon(FlutterDemo.bar_chart),
+              Icon(FlutterDemo.person)
+              // Container(
+              //   height: 50,
+              //   color: Colors.red,
+              //   child: Text(
+              //     'Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.',
+              //     style: TextStyle(fontSize: 20),
+              //   ),
+              // ),
             ],
           ),
         ],

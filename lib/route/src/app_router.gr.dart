@@ -15,6 +15,7 @@ import '../../page/login.dart' as _i10;
 import '../../page/photos.dart' as _i4;
 import '../../page/riverpod_screen.dart' as _i6;
 import '../../page/shimmer.dart' as _i9;
+import '../../page/silverappbar.dart' as _i13;
 import '../../page/stepper.dart' as _i12;
 import '../../page/text_overflow.dart' as _i11;
 
@@ -75,6 +76,11 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i12.SteppeScreen();
+        }),
+    SilverAppBarRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return _i13.SilverAppBarScreen();
         })
   };
 
@@ -89,7 +95,8 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(ShimmerRoute.name, path: '/shimmer-screen'),
         _i1.RouteConfig(LoginRoute.name, path: '/login-screen'),
         _i1.RouteConfig(TextOverflowRoute.name, path: '/text-overflow-screen'),
-        _i1.RouteConfig(SteppeRoute.name, path: '/steppe-screen')
+        _i1.RouteConfig(SteppeRoute.name, path: '/steppe-screen'),
+        _i1.RouteConfig(SilverAppBarRoute.name, path: '/silver-app-bar-screen')
       ];
 }
 
@@ -159,4 +166,10 @@ class SteppeRoute extends _i1.PageRouteInfo {
   const SteppeRoute() : super(name, path: '/steppe-screen');
 
   static const String name = 'SteppeRoute';
+}
+
+class SilverAppBarRoute extends _i1.PageRouteInfo {
+  const SilverAppBarRoute() : super(name, path: '/silver-app-bar-screen');
+
+  static const String name = 'SilverAppBarRoute';
 }
