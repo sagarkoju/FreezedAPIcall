@@ -41,7 +41,7 @@ class UserRepository implements IUserRepository {
         AuthEp.demo,
         cancelToken: cancelToken,
       );
-      final json = List<Map<String, dynamic>>.from(response.data!);
+      final json = List<Map<String, dynamic>>.from(response.data);
       final data = json.map((e) => Data.fromJson(e)).toList();
       log('$data');
       return Left(data);
@@ -60,7 +60,7 @@ class UserRepository implements IUserRepository {
         Demo.comment_info,
         cancelToken: cancelToken,
       );
-      final json = List<Map<String, dynamic>>.from(response.data!);
+      final json = List<Map<String, dynamic>>.from(response.data);
       final data = json.map((e) => Comment.fromJson(e)).toList();
       log('$data');
       return Left(data);
@@ -79,7 +79,7 @@ class UserRepository implements IUserRepository {
         Todo.todo_info,
         cancelToken: cancelToken,
       );
-      final json = List<Map<String, dynamic>>.from(response.data!);
+      final json = List<Map<String, dynamic>>.from(response.data);
       final data = json.map((e) => Todos.fromJson(e)).toList();
       log('$data');
       return Left(data);

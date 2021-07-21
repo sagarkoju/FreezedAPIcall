@@ -39,7 +39,7 @@ class _TodoScreenState extends State<TodoScreen> {
                 orElse: () => const SizedBox(),
                 success: (user) {
                   return ListView.builder(
-                      itemCount: user.data!.length,
+                      itemCount: user.data.length,
                       itemBuilder: (context, index) {
                         final datadisplay = user.data;
                         return ListTile(
