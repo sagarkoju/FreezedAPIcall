@@ -80,7 +80,7 @@ class AppRouter extends _i1.RootStackRouter {
     SilverAppBarRoute.name: (routeData) => _i1.MaterialPageX<void>(
         routeData: routeData,
         builder: (_) {
-          return _i13.SilverAppBarScreen();
+          return const _i13.SilverAppBarScreen();
         })
   };
 
