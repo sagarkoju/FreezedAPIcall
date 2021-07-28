@@ -11,7 +11,9 @@ import '../../page/animated_icon.dart' as _i8;
 import '../../page/button.dart' as _i3;
 import '../../page/comments_data.dart' as _i5;
 import '../../page/dragablescroll_shet.dart' as _i7;
+import '../../page/dynamic_text_formfield.dart' as _i15;
 import '../../page/login.dart' as _i10;
+import '../../page/phone_call_dialer.dart' as _i14;
 import '../../page/photos.dart' as _i4;
 import '../../page/riverpod_screen.dart' as _i6;
 import '../../page/shimmer.dart' as _i9;
@@ -81,6 +83,16 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i13.SilverAppBarScreen();
+        }),
+    PhoneCallRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i14.PhoneCallScreen();
+        }),
+    DynamicTextFormFieldRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i15.DynamicTextFormFieldScreen();
         })
   };
 
@@ -96,7 +108,10 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(LoginRoute.name, path: '/login-screen'),
         _i1.RouteConfig(TextOverflowRoute.name, path: '/text-overflow-screen'),
         _i1.RouteConfig(SteppeRoute.name, path: '/steppe-screen'),
-        _i1.RouteConfig(SilverAppBarRoute.name, path: '/silver-app-bar-screen')
+        _i1.RouteConfig(SilverAppBarRoute.name, path: '/silver-app-bar-screen'),
+        _i1.RouteConfig(PhoneCallRoute.name, path: '/phone-call-screen'),
+        _i1.RouteConfig(DynamicTextFormFieldRoute.name,
+            path: '/dynamic-text-form-field-screen')
       ];
 }
 
@@ -172,4 +187,17 @@ class SilverAppBarRoute extends _i1.PageRouteInfo {
   const SilverAppBarRoute() : super(name, path: '/silver-app-bar-screen');
 
   static const String name = 'SilverAppBarRoute';
+}
+
+class PhoneCallRoute extends _i1.PageRouteInfo {
+  const PhoneCallRoute() : super(name, path: '/phone-call-screen');
+
+  static const String name = 'PhoneCallRoute';
+}
+
+class DynamicTextFormFieldRoute extends _i1.PageRouteInfo {
+  const DynamicTextFormFieldRoute()
+      : super(name, path: '/dynamic-text-form-field-screen');
+
+  static const String name = 'DynamicTextFormFieldRoute';
 }

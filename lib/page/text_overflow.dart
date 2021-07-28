@@ -13,21 +13,22 @@ class TextOverflowScreen extends StatelessWidget {
           backgroundColor: Colors.green),
       body: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Icon(FlutterDemo.alarm_light),
-              Icon(FlutterDemo.bar_chart),
-              Icon(FlutterDemo.person)
-              // Container(
-              //   height: 50,
-              //   color: Colors.red,
-              //   child: Text(
-              //     'Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.',
-              //     style: TextStyle(fontSize: 20),
-              //   ),
-              // ),
-            ],
+          Container(
+            height: 50,
+            color: Colors.red,
+            child: Row(
+              children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Text(
+                      'Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.Hello it me Sagar Koju.',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

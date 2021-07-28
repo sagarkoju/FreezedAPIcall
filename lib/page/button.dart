@@ -76,6 +76,16 @@ class ButtonScreenPage extends StatelessWidget {
                     context.router.push(RiverpodRoute());
                   }),
               ButtonWidget(
+                  text: 'Phone caller',
+                  onpressed: () {
+                    context.router.push(PhoneCallRoute());
+                  }),
+                    ButtonWidget(
+                  text: 'Dynamic Text FormField',
+                  onpressed: () {
+                    context.router.push(DynamicTextFormFieldRoute());
+                  }),
+              ButtonWidget(
                   text: 'Bottom Sheet',
                   onpressed: () {
                     showModalBottomSheet(
