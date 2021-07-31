@@ -85,6 +85,11 @@ class ButtonScreenPage extends StatelessWidget {
                   onpressed: () {
                     context.router.push(DynamicTextFormFieldRoute());
                   }),
+                        ButtonWidget(
+                  text: 'Navigating new Screen',
+                  onpressed: () {
+                    context.router.push(DynamicTextFormFieldRoute());
+                  }),
               ButtonWidget(
                   text: 'Bottom Sheet',
                   onpressed: () {

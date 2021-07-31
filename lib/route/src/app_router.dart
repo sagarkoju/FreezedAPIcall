@@ -7,6 +7,7 @@ import 'package:demo/page/comments_data.dart';
 import 'package:demo/page/dragablescroll_shet.dart';
 import 'package:demo/page/dynamic_text_formfield.dart';
 import 'package:demo/page/login.dart';
+import 'package:demo/page/new_screen.dart';
 import 'package:demo/page/phone_call_dialer.dart';
 import 'package:demo/page/photos.dart';
 import 'package:demo/page/riverpod_screen.dart';
@@ -32,6 +33,7 @@ import 'package:demo/page/text_overflow.dart';
     AutoRoute<void>(page: SilverAppBarScreen),
     AutoRoute<void>(page: PhoneCallScreen),
     AutoRoute<void>(page: DynamicTextFormFieldScreen),
+    AutoRoute<void>(page: NewScreen),
   ],
 )
 class $AppRouter {}

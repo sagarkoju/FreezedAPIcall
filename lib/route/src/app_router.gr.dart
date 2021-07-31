@@ -13,6 +13,7 @@ import '../../page/comments_data.dart' as _i5;
 import '../../page/dragablescroll_shet.dart' as _i7;
 import '../../page/dynamic_text_formfield.dart' as _i15;
 import '../../page/login.dart' as _i10;
+import '../../page/new_screen.dart' as _i16;
 import '../../page/phone_call_dialer.dart' as _i14;
 import '../../page/photos.dart' as _i4;
 import '../../page/riverpod_screen.dart' as _i6;
@@ -93,6 +94,11 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i15.DynamicTextFormFieldScreen();
+        }),
+    NewRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i16.NewScreen();
         })
   };
 
@@ -111,7 +117,8 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(SilverAppBarRoute.name, path: '/silver-app-bar-screen'),
         _i1.RouteConfig(PhoneCallRoute.name, path: '/phone-call-screen'),
         _i1.RouteConfig(DynamicTextFormFieldRoute.name,
-            path: '/dynamic-text-form-field-screen')
+            path: '/dynamic-text-form-field-screen'),
+        _i1.RouteConfig(NewRoute.name, path: '/new-screen')
       ];
 }
 
@@ -200,4 +207,10 @@ class DynamicTextFormFieldRoute extends _i1.PageRouteInfo {
       : super(name, path: '/dynamic-text-form-field-screen');
 
   static const String name = 'DynamicTextFormFieldRoute';
+}
+
+class NewRoute extends _i1.PageRouteInfo {
+  const NewRoute() : super(name, path: '/new-screen');
+
+  static const String name = 'NewRoute';
 }
