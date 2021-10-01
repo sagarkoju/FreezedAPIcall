@@ -25,6 +25,11 @@ class ButtonScreenPage extends StatelessWidget {
                   onpressed: () {
                     context.router.push(HomePageRoute());
                   }),
+              ButtonWidget(
+                  text: 'Tinder Swiper',
+                  onpressed: () {
+                    context.router.push(TinderSwiperRoute());
+                  }),
               SizedBox(
                 height: 10,
               ),
@@ -80,12 +85,12 @@ class ButtonScreenPage extends StatelessWidget {
                   onpressed: () {
                     context.router.push(PhoneCallRoute());
                   }),
-                    ButtonWidget(
+              ButtonWidget(
                   text: 'Dynamic Text FormField',
                   onpressed: () {
                     context.router.push(DynamicTextFormFieldRoute());
                   }),
-                        ButtonWidget(
+              ButtonWidget(
                   text: 'Navigating new Screen',
                   onpressed: () {
                     context.router.push(DynamicTextFormFieldRoute());

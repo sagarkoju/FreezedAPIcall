@@ -15,6 +15,7 @@ import 'package:demo/page/shimmer.dart';
 import 'package:demo/page/silverappbar.dart';
 import 'package:demo/page/stepper.dart';
 import 'package:demo/page/text_overflow.dart';
+import 'package:demo/page/tinder_swiper.dart';
 
 @MaterialAutoRouter(
   preferRelativeImports: true,
@@ -34,6 +35,7 @@ import 'package:demo/page/text_overflow.dart';
     AutoRoute<void>(page: PhoneCallScreen),
     AutoRoute<void>(page: DynamicTextFormFieldScreen),
     AutoRoute<void>(page: NewScreen),
+    AutoRoute<void>(page: TinderSwiperScreen),
   ],
 )
 class $AppRouter {}

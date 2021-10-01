@@ -21,6 +21,7 @@ import '../../page/shimmer.dart' as _i9;
 import '../../page/silverappbar.dart' as _i13;
 import '../../page/stepper.dart' as _i12;
 import '../../page/text_overflow.dart' as _i11;
+import '../../page/tinder_swiper.dart' as _i17;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
@@ -99,6 +100,11 @@ class AppRouter extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return const _i16.NewScreen();
+        }),
+    TinderSwiperRoute.name: (routeData) => _i1.MaterialPageX<void>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i17.TinderSwiperScreen();
         })
   };
 
@@ -118,7 +124,8 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(PhoneCallRoute.name, path: '/phone-call-screen'),
         _i1.RouteConfig(DynamicTextFormFieldRoute.name,
             path: '/dynamic-text-form-field-screen'),
-        _i1.RouteConfig(NewRoute.name, path: '/new-screen')
+        _i1.RouteConfig(NewRoute.name, path: '/new-screen'),
+        _i1.RouteConfig(TinderSwiperRoute.name, path: '/tinder-swiper-screen')
       ];
 }
 
@@ -213,4 +220,10 @@ class NewRoute extends _i1.PageRouteInfo {
   const NewRoute() : super(name, path: '/new-screen');
 
   static const String name = 'NewRoute';
+}
+
+class TinderSwiperRoute extends _i1.PageRouteInfo {
+  const TinderSwiperRoute() : super(name, path: '/tinder-swiper-screen');
+
+  static const String name = 'TinderSwiperRoute';
 }

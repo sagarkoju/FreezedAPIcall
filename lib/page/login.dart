@@ -1,3 +1,4 @@
+import 'package:demo/Widget/custom_textbox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final formkey = GlobalKey<FormState>();
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
+  TextEditingController firstname = TextEditingController();
   bool togglevisibilty = false;
   @override
   void dispose() {
@@ -80,6 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: passwordcontroller,
                 decoration: InputDecoration(
                   focusColor: Colors.green,
+                  labelText: "Enter the Password",
                   hintText: " Enter the password",
                   prefixIcon: Icon(Icons.lock),
                   suffixIcon: IconButton(
@@ -100,6 +103,12 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(
               height: 20,
+            ),
+            CustomLabelTextField(
+              controller: firstname,
+              hintText: 'First Name',
+              textInputType: TextInputType.text,
+              textCapitalization: TextCapitalization.words,
             ),
             buildbutton(),
           ]),

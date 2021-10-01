@@ -39,7 +39,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 orElse: () => const SizedBox(),
                 success: (user) {
                   return ListView.builder(
-                      itemCount: user.data!.length,
+                      itemCount: user.data.length,
                       itemBuilder: (context, index) {
                         final data = user.data;
                         return ListTile(
