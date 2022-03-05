@@ -3,9 +3,11 @@ import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:demo/page/animated_icon.dart';
 import 'package:demo/page/button.dart';
+import 'package:demo/page/button_disable.dart';
 import 'package:demo/page/comments_data.dart';
 import 'package:demo/page/dragablescroll_shet.dart';
 import 'package:demo/page/dynamic_text_formfield.dart';
+import 'package:demo/page/fold.dart';
 import 'package:demo/page/login.dart';
 import 'package:demo/page/new_screen.dart';
 import 'package:demo/page/phone_call_dialer.dart';
@@ -15,6 +17,7 @@ import 'package:demo/page/shimmer.dart';
 import 'package:demo/page/silverappbar.dart';
 import 'package:demo/page/stepper.dart';
 import 'package:demo/page/text_overflow.dart';
+import 'package:demo/page/textfield_data_show.dart';
 import 'package:demo/page/tinder_swiper.dart';
 
 @MaterialAutoRouter(
@@ -36,6 +39,9 @@ import 'package:demo/page/tinder_swiper.dart';
     AutoRoute<void>(page: DynamicTextFormFieldScreen),
     AutoRoute<void>(page: NewScreen),
     AutoRoute<void>(page: TinderSwiperScreen),
+    AutoRoute<void>(page: FoldScreen),
+    AutoRoute<void>(page: ButtonEnableDisableScreen),
+    AutoRoute<void>(page: ShowDataScreen),
   ],
 )
 class $AppRouter {}

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'base_state.dart';
 
@@ -51,6 +52,14 @@ mixin _$BaseState<T> {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    TResult Function(T? data)? success,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
@@ -65,6 +74,14 @@ mixin _$BaseState<T> {
     required TResult Function(BaseLoading<T> value) loading,
     required TResult Function(BaseError<T> value) error,
     required TResult Function(BaseSuccess<T> value) success,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BaseInitial<T> value)? initial,
+    TResult Function(BaseLoading<T> value)? loading,
+    TResult Function(BaseError<T> value)? error,
+    TResult Function(BaseSuccess<T> value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -144,6 +161,17 @@ class _$BaseInitial<T> implements BaseInitial<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    TResult Function(T? data)? success,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
@@ -166,6 +194,17 @@ class _$BaseInitial<T> implements BaseInitial<T> {
     required TResult Function(BaseSuccess<T> value) success,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BaseInitial<T> value)? initial,
+    TResult Function(BaseLoading<T> value)? loading,
+    TResult Function(BaseError<T> value)? error,
+    TResult Function(BaseSuccess<T> value)? success,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -238,6 +277,17 @@ class _$BaseLoading<T> implements BaseLoading<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    TResult Function(T? data)? success,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
@@ -260,6 +310,17 @@ class _$BaseLoading<T> implements BaseLoading<T> {
     required TResult Function(BaseSuccess<T> value) success,
   }) {
     return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BaseInitial<T> value)? initial,
+    TResult Function(BaseLoading<T> value)? loading,
+    TResult Function(BaseError<T> value)? error,
+    TResult Function(BaseSuccess<T> value)? success,
+  }) {
+    return loading?.call(this);
   }
 
   @override
@@ -356,6 +417,17 @@ class _$BaseError<T> implements BaseError<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    TResult Function(T? data)? success,
+  }) {
+    return error?.call(failure);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
@@ -378,6 +450,17 @@ class _$BaseError<T> implements BaseError<T> {
     required TResult Function(BaseSuccess<T> value) success,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BaseInitial<T> value)? initial,
+    TResult Function(BaseLoading<T> value)? loading,
+    TResult Function(BaseError<T> value)? error,
+    TResult Function(BaseSuccess<T> value)? success,
+  }) {
+    return error?.call(this);
   }
 
   @override
@@ -480,6 +563,17 @@ class _$BaseSuccess<T> implements BaseSuccess<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    TResult Function(T? data)? success,
+  }) {
+    return success?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
@@ -502,6 +596,17 @@ class _$BaseSuccess<T> implements BaseSuccess<T> {
     required TResult Function(BaseSuccess<T> value) success,
   }) {
     return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BaseInitial<T> value)? initial,
+    TResult Function(BaseLoading<T> value)? loading,
+    TResult Function(BaseError<T> value)? error,
+    TResult Function(BaseSuccess<T> value)? success,
+  }) {
+    return success?.call(this);
   }
 
   @override

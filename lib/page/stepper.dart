@@ -78,6 +78,7 @@ class _SteppeScreenState extends State<SteppeScreen> {
           ),
         ),
         isActive: _currentstep >= 0,
+        state: _currentstep ==0 ? StepState.editing: StepState.complete
       ),
       Step(
         title: Text(_currentstep ==1 ? 'Email': ''),
@@ -88,6 +89,7 @@ class _SteppeScreenState extends State<SteppeScreen> {
           ),
         ),
         isActive: _currentstep >= 1,
+         state: _currentstep ==1 ? StepState.editing: StepState.complete
       ),
       Step(
         title: Text(_currentstep ==2 ? 'Address': ''),
@@ -98,6 +100,7 @@ class _SteppeScreenState extends State<SteppeScreen> {
           ),
         ),
         isActive: _currentstep >= 2,
+         state: _currentstep ==2 ? StepState.editing: StepState.complete
       ),
       Step(
         title: Text(_currentstep ==3 ? 'Game': ''),
@@ -108,6 +111,7 @@ class _SteppeScreenState extends State<SteppeScreen> {
           ),
         ),
         isActive: _currentstep >= 3,
+         state: _currentstep ==3 ? StepState.editing: StepState.complete
       ),
       Step(
         title: Text(_currentstep ==4 ? 'Phone': ''),
@@ -118,6 +122,7 @@ class _SteppeScreenState extends State<SteppeScreen> {
           ),
         ),
         isActive: _currentstep >= 4,
+         state: _currentstep ==4 ? StepState.editing: StepState.complete
       ),
     ];
     return _steps;

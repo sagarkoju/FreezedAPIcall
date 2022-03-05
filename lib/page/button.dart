@@ -26,6 +26,21 @@ class ButtonScreenPage extends StatelessWidget {
                     context.router.push(HomePageRoute());
                   }),
               ButtonWidget(
+                  text: 'TextField to update Data',
+                  onpressed: () {
+                    context.router.push(ShowDataRoute());
+                  }),
+              ButtonWidget(
+                  text: 'Disable Enable Button',
+                  onpressed: () {
+                    context.router.push(ButtonEnableDisableRoute());
+                  }),
+              ButtonWidget(
+                  text: 'Fold Method',
+                  onpressed: () {
+                    context.router.push(FoldRoute());
+                  }),
+              ButtonWidget(
                   text: 'Tinder Swiper',
                   onpressed: () {
                     context.router.push(TinderSwiperRoute());

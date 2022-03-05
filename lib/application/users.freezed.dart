@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'users.dart';
 
@@ -166,8 +167,7 @@ class _$_Data with DiagnosticableTreeMixin implements _Data {
       this.url = '',
       this.thumbnailUrl = ''});
 
-  factory _$_Data.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataFromJson(json);
+  factory _$_Data.fromJson(Map<String, dynamic> json) => _$$_DataFromJson(json);
 
   @JsonKey(defaultValue: -1)
   @override
@@ -236,7 +236,7 @@ class _$_Data with DiagnosticableTreeMixin implements _Data {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataToJson(this);
+    return _$$_DataToJson(this);
   }
 }
 
@@ -418,7 +418,7 @@ class _$_Comment with DiagnosticableTreeMixin implements _Comment {
       this.body = ''});
 
   factory _$_Comment.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommentFromJson(json);
+      _$$_CommentFromJson(json);
 
   @JsonKey(defaultValue: -1)
   @override
@@ -485,7 +485,7 @@ class _$_Comment with DiagnosticableTreeMixin implements _Comment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommentToJson(this);
+    return _$$_CommentToJson(this);
   }
 }
 
@@ -651,7 +651,7 @@ class _$_Todos with DiagnosticableTreeMixin implements _Todos {
       {this.id = -1, this.userId = -1, this.title = '', this.completed = ''});
 
   factory _$_Todos.fromJson(Map<String, dynamic> json) =>
-      _$_$_TodosFromJson(json);
+      _$$_TodosFromJson(json);
 
   @JsonKey(defaultValue: -1)
   @override
@@ -712,7 +712,7 @@ class _$_Todos with DiagnosticableTreeMixin implements _Todos {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TodosToJson(this);
+    return _$$_TodosToJson(this);
   }
 }
 

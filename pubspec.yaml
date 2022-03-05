@@ -15,20 +15,20 @@ dependencies:
   dio: 4.0.0-beta7
   url_launcher: ^6.0.6
   shimmer: ^2.0.0
-  auto_route: ^2.2.0
+  auto_route: ^3.2.4
   background_app_bar: ^2.0.0
   http: ^0.13.3
   flutter_phone_direct_caller: ^2.0.0
   file_picker: ^3.0.3
-  flutter_tinder_swipe: ^0.0.4
+  # flutter_tinder_swipe: ^0.0.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^0.14.1+1
   build_runner: ^2.0.4
-  json_serializable: ^4.1.0
-  auto_route_generator: ^2.0.0
+  json_serializable: ^5.0.2
+  auto_route_generator: ^3.2.3
 flutter:
   uses-material-design: true
   assets:
